@@ -5,6 +5,15 @@ public class Address {
     String addressLine1;
     int addressId;
 
+    @Override
+    public String toString() {
+        return "Address{" +
+                "zipcode='" + zipcode + '\'' +
+                ", addressLine1='" + addressLine1 + '\'' +
+                ", addressId=" + addressId +
+                '}';
+    }
+
     public Address() {
     }
 

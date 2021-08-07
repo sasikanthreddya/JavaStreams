@@ -9,6 +9,7 @@ public class Test {
 
         List<Employee> employeeList = EmpployeeService.getAllEmployee();
 
+
         //// to get only List of  employee as output out of matching one parameter off its list of address
         List<Employee> employeeList1 = employeeList.stream().filter(employee ->
               employee.getaddlistList().stream().anyMatch(address -> address.addressId==11)).collect(Collectors.toList());
@@ -30,8 +31,13 @@ public class Test {
             Address address_result = employee.getaddlistList().stream().filter(address -> address.addressId == 11).findAny().get();
             return address_result;
         }).findAny().get();
-         System.out.println(address_1.getAddressLine1());
+       //  System.out.println(address_1.getAddressLine1());
 
+
+
+       /* addresses.stream().forEach(Address->{
+            System.out.println(Address);
+        });*/
 
     }
 }
